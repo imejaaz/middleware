@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'middleware',
     'verse',
     'cookie',
+    'session',
 ]
 
 MIDDLEWARE = [

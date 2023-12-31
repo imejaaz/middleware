@@ -10,10 +10,19 @@ def set(request):
     obj.set_signed_cookie('name', 'akhtar shayan', salt ='ejaz')
     return obj
 
+def get(request):
 
-# def get(request):
-#     pass
-# def del(request):
-#     pass
+    name = request.get_signed_cookie('name', salt = 'ejaz')
+    print(name)
+    dict = {
+        'name':name
+    }
+    return render(request, 'cookie/get.html', dict)
+
+
+def delete(request):
+    obj =  render(request, 'cookie/del.html')
+    obj.delete_cookie('name')
+    return obj
 
 
