@@ -7,7 +7,31 @@
 </head>
 <body>
     <h3>this is page for session gettng data here</h3>
+    <hr>
+    nam  is   == >{{name}}
+    {{age}}
+    <hr>
 
-    {{name}}
+    {% for key in keys %}
+
+    {{key}}
+
+    {% endfor %}
+
+    <hr>
+
+    {% for a,b in items %}
+
+    {{a}}  :  {{b}} <br>
+
+
+    {% endfor %}
+
+    <hr>
+    {{ request.session.get_session_cookie_age }} <br>
+    {{ request.session.get_expiry_date }} <br>
+    {{ request.session.get_expiry_age }} <br>
+    {{ request.session.get_expire_at_browser_close }}
+
 </body>
 </html>
