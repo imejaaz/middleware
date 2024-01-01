@@ -1,12 +1,9 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 
 
 
-def set_test_cookie(request):
-    test = request.session.set_test_cookie()
-    print(test)
-# Create your views here.
 def setSession(request):
 
     request.session.set_expiry(90)
@@ -18,12 +15,13 @@ def setSession(request):
 
 def getSession(request):
 
-    # name = request.session.get('name', '')
-    # age = request.session.get('age', '')
-    # items = request.session.items()
-    # keys = request.session.keys()
-    # request.session.setdefault('age', 20)
-    # return render(request, 'session/get.html', {'name' :name, 'age':age, 'keys': keys, 'items':items})
+
+    name = request.session.get('name', '')
+    age = request.session.get('age', '')
+    items = request.session.items()
+    keys = request.session.keys()
+    request.session.setdefault('age', 20)
+    return render(request, 'session/get.html', {'name' :name, 'age':age, 'keys': keys, 'items':items})
 
     name = request.session.get('name', '')
     # print(request.session.get_session_cookie_age)

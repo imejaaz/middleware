@@ -4,5 +4,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('verse/', include('verse.urls')),
     path('cookie/', include('cookie.urls')),
-    path('', include('session.urls')),
+    path('session/', include('session.urls')),
+    path('', include('test_cookie.urls')),
 ]

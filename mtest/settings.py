@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'verse',
     'cookie',
     'session',
+    'test_cookie'
 ]
 
 MIDDLEWARE = [
