@@ -1,6 +1,11 @@
 from django.shortcuts import render
 
 
+
+
+def set_test_cookie(request):
+    test = request.session.set_test_cookie()
+    print(test)
 # Create your views here.
 def setSession(request):
 
